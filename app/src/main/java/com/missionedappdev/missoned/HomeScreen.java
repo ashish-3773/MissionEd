@@ -1,8 +1,12 @@
 package com.missionedappdev.missoned;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -18,6 +22,8 @@ import androidx.appcompat.widget.Toolbar;
 
 public class HomeScreen extends AppCompatActivity {
 
+    private ImageView btnAct1,btnAct2,btnAct3,btnAct4;
+
     private AppBarConfiguration mAppBarConfiguration;
 
     @Override
@@ -25,6 +31,8 @@ public class HomeScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
         Toolbar toolbar = findViewById(R.id.toolbar);
+
+
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +53,46 @@ public class HomeScreen extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        /*
+        * Buttons for navigation to various activities : change them as needed in content_main.xml
+        * */
+
+        btnAct1=findViewById(R.id.btnAct1); btnAct2=findViewById(R.id.btnAct2);
+        btnAct3=findViewById(R.id.btnAct3); btnAct4=findViewById(R.id.btnAct4);
+
+        btnAct1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("Step","Activity 1 opened");
+                startActivity(new Intent(HomeScreen.this,Activity1.class));
+            }
+        });
+        btnAct2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("Step","Activity 2 opened");
+
+                startActivity(new Intent(HomeScreen.this,Activity2.class));
+            }
+        });
+        btnAct3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("Step","Activity 3 opened");
+
+                startActivity(new Intent(HomeScreen.this,Activity3.class));
+            }
+        });
+        btnAct4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("Step","Activity 4 opened");
+
+                startActivity(new Intent(HomeScreen.this,Activity4.class));
+            }
+        });
+
     }
 
     @Override
