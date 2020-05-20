@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">missionED</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="title_text">Title Text</string>
+    <string name="text_description">Text Description</string>
+    <string name="select_your_course">Select your Grade</string>
+    <string name="classes_6_10">CLASSES 6-10</string>
+    <string name="competetive_exams">COMPETETIVE EXAMS</string>
+    <string name="_6th">6th</string>
+    <string name="_7th">7th</string>
+    <string name="_8th">8th</string>
+    <string name="_9th">9th</string>
+    <string name="_10th">10th</string>
+    <string name="iit_jee">IIT JEE</string>
+    <string name="olympiad">OLYMPIAD</string>
+    <string name="digital_learning_redifned">Digital Learning. Redifned</string>
+    <string name="the_ultimate_companion_for_shaping_your_future">The ultimate companion for shaping your future!</string>
+    <string name="select_board">SELECT BOARD</string>
+    <string name="cbse">CBSE</string>
+    <string name="icse">ICSE</string>
+    <string name="continu">Continue</string>
+</resources>
