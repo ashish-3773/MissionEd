@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Menu;
-import android.widget.Button;
 import android.widget.ImageView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -65,7 +64,7 @@ public class HomeScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.d("Step","Activity 1 opened");
-                startActivity(new Intent(HomeScreen.this,Activity1.class));
+                startActivity(new Intent(HomeScreen.this, Activity1.class));
             }
         });
         btnAct2.setOnClickListener(new View.OnClickListener() {

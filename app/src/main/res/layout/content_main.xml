@@ -36,14 +36,15 @@
         android:id="@+id/textView2"
         android:layout_width="80dp"
         android:layout_height="56dp"
-        android:text="Activity1"
         android:layout_gravity="center_horizontal"
+        android:text="Physics"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnAct1"
         app:layout_constraintEnd_toEndOf="@+id/btnAct1"
+        app:layout_constraintHorizontal_bias="0.676"
         app:layout_constraintStart_toStartOf="@+id/btnAct1"
         app:layout_constraintTop_toTopOf="@+id/btnAct1"
-        app:layout_constraintVertical_bias="0.317" />
+        app:layout_constraintVertical_bias="0.539" />
 
     <ImageView
         android:id="@+id/btnAct2"
@@ -59,20 +60,20 @@
         app:layout_constraintVertical_bias="0.34"
         app:srcCompat="@drawable/profile_picture" />
 
+
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="80dp"
-        android:layout_height="45dp"
-        android:text="Activity2"
+        android:layout_width="104dp"
+        android:layout_height="59dp"
         android:layout_gravity="center_horizontal"
+        android:text="Chemistry"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnAct2"
         app:layout_constraintEnd_toEndOf="@+id/btnAct2"
-        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintHorizontal_bias="0.731"
         app:layout_constraintStart_toStartOf="@+id/btnAct2"
         app:layout_constraintTop_toTopOf="@+id/btnAct2"
-        app:layout_constraintVertical_bias="0.336" />
-
+        app:layout_constraintVertical_bias="0.657" />
 
     <ImageView
         android:id="@+id/btnAct3"
@@ -107,28 +108,28 @@
         android:layout_width="80dp"
         android:layout_height="45dp"
         android:layout_gravity="center_horizontal"
-        android:text="Activity3"
+        android:text="Maths"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnAct3"
         app:layout_constraintEnd_toEndOf="@+id/btnAct3"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.676"
         app:layout_constraintStart_toStartOf="@+id/btnAct3"
         app:layout_constraintTop_toTopOf="@+id/btnAct3"
-        app:layout_constraintVertical_bias="0.413" />
+        app:layout_constraintVertical_bias="0.54" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="80dp"
         android:layout_height="45dp"
-        android:text="Activity4"
         android:layout_gravity="center_horizontal"
+        android:text="Biology"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnAct4"
         app:layout_constraintEnd_toEndOf="@+id/btnAct4"
-        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintHorizontal_bias="0.615"
         app:layout_constraintStart_toStartOf="@+id/btnAct4"
         app:layout_constraintTop_toTopOf="@+id/btnAct4"
-        app:layout_constraintVertical_bias="0.415" />
+        app:layout_constraintVertical_bias="0.436" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
