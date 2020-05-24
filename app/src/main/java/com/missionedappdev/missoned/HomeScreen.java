@@ -57,8 +57,8 @@ public class HomeScreen extends AppCompatActivity {
         * Buttons for navigation to various activities : change them as needed in content_main.xml
         * */
 
-        btnAct1=findViewById(R.id.btnAct1); btnAct2=findViewById(R.id.btnAct2);
-        btnAct3=findViewById(R.id.btnAct3); btnAct4=findViewById(R.id.btnAct4);
+        btnAct1=findViewById(R.id.physics); btnAct2=findViewById(R.id.chemistry);
+        btnAct3=findViewById(R.id.maths); btnAct4=findViewById(R.id.biology);
 
         btnAct1.setOnClickListener(new View.OnClickListener() {
             @Override
