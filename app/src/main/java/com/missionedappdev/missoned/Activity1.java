@@ -13,6 +13,7 @@ public class Activity1 extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
+    private physics_itemAdapter itemAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,10 +55,15 @@ public class Activity1 extends AppCompatActivity {
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
-        mAdapter = new physics_itemAdapter(physics_itemArrayList);
 
+        // mAdapter = new physics_itemAdapter(physics_itemArrayList);
+        // mRecyclerView.setLayoutManager(mLayoutManager);
+        // mRecyclerView.setAdapter(mAdapter);
+
+        itemAdapter=new physics_itemAdapter(physics_itemArrayList);
         mRecyclerView.setLayoutManager(mLayoutManager);
-        mRecyclerView.setAdapter(mAdapter);
+        mRecyclerView.setAdapter(itemAdapter);
+        itemAdapter.notifyDataSetChanged();
 
     }
 }
