@@ -1,5 +1,7 @@
 package com.missionedappdev.missoned;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +15,12 @@ import java.util.ArrayList;
 
 public class physics_itemAdapter extends RecyclerView.Adapter<physics_itemAdapter.physcics_itemHolder> {
     private ArrayList<physics_item> mphysicslist;
+    private Context context;
+
+    public physics_itemAdapter(Context context,ArrayList<physics_item> mphysicslist)
+    {
+        this.context=context; this.mphysicslist=mphysicslist;
+    }
 
     public static class physcics_itemHolder extends RecyclerView.ViewHolder{
         public ImageView mImageview;
@@ -25,9 +33,9 @@ public class physics_itemAdapter extends RecyclerView.Adapter<physics_itemAdapte
         }
     }
 
-    public physics_itemAdapter(ArrayList<physics_item> physicslist){
+    /*public physics_itemAdapter(ArrayList<physics_item> physicslist){
         mphysicslist = physicslist;
-    }
+    }*/
 
     @NonNull
     @Override
@@ -43,6 +51,21 @@ public class physics_itemAdapter extends RecyclerView.Adapter<physics_itemAdapte
 
         holder.mImageview.setImageResource(currentItem.getmImageResource());
         holder.mTextView.setText(currentItem.getMchapter());
+
+        holder.mImageview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // new Activity1().openChapter();
+
+            }
+        });
+
+        holder.mTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // new Activity1().openChapter();
+            }
+        });
 
     }
 

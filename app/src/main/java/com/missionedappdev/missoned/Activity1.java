@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -21,6 +22,7 @@ public class Activity1 extends AppCompatActivity {
         setContentView(R.layout.activity_1);
 
         ArrayList<physics_item> physics_itemArrayList = new ArrayList<>();
+
         physics_itemArrayList.add(new physics_item("chapter 1", R.drawable.ic_check_box));
         physics_itemArrayList.add(new physics_item("chapter 2", R.drawable.ic_check_box));
         physics_itemArrayList.add(new physics_item("chapter 3", R.drawable.ic_check_box));
@@ -60,10 +62,17 @@ public class Activity1 extends AppCompatActivity {
         // mRecyclerView.setLayoutManager(mLayoutManager);
         // mRecyclerView.setAdapter(mAdapter);
 
-        itemAdapter=new physics_itemAdapter(physics_itemArrayList);
+        itemAdapter=new physics_itemAdapter(getApplicationContext(),physics_itemArrayList);
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(itemAdapter);
         itemAdapter.notifyDataSetChanged();
 
     }
+
+    public void openChapter()
+    {
+        startActivity(new Intent(Activity1.this,activity_chapter.class));
+    }
+
+
 }

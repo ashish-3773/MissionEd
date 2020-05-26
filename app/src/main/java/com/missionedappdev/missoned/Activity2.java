@@ -54,7 +54,7 @@ public class Activity2 extends AppCompatActivity {
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
-        mAdapter = new physics_itemAdapter(physics_itemArrayList);
+        mAdapter = new physics_itemAdapter(getApplicationContext(),physics_itemArrayList);
 
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
