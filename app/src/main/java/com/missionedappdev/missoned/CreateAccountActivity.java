@@ -98,7 +98,12 @@ public class CreateAccountActivity extends AppCompatActivity {
                          * authentication and adding user to database : code
                          */
                         Toast.makeText(CreateAccountActivity.this, "Successfully created account !", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(CreateAccountActivity.this, HomeScreen.class));
+                        /*startActivity(new Intent(CreateAccountActivity.this, HomeScreen.class));
+                        finish();*/
+                        Intent intent=new Intent(CreateAccountActivity.this,HomeScreen.class);
+                        intent.putExtra("Email",email);
+                        intent.putExtra("Username",uname);
+                        startActivity(intent);
                         finish();
                     }
 

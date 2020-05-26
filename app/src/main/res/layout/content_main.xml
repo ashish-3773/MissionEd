@@ -157,7 +157,7 @@
             app:layout_constraintTop_toBottomOf="@+id/nav_host_fragment" />
 
         <TextView
-            android:id="@+id/textView10"
+            android:id="@+id/displayUsername"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

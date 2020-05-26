@@ -54,7 +54,11 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Logged in successfully !", Toast.LENGTH_SHORT).show();
                     Log.d("Status","Logged in");
 
-                    startActivity(new Intent(LoginActivity.this, HomeScreen.class));
+                    /*startActivity(new Intent(LoginActivity.this, HomeScreen.class));
+                    finish();*/
+                    Intent intent=new Intent(LoginActivity.this, HomeScreen.class);
+                    intent.putExtra("Email",email);
+                    startActivity(intent);
                     finish();
 
                 }

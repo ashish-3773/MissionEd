@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -18,6 +19,8 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import org.w3c.dom.Text;
 
 public class HomeScreen extends AppCompatActivity {
 
@@ -57,6 +60,25 @@ public class HomeScreen extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        View headerView=navigationView.getHeaderView(0);
+
+        TextView tvUsername=(TextView) headerView.findViewById(R.id.tvUsername);
+        TextView tvEmail=(TextView) headerView.findViewById(R.id.tvEmail);
+        TextView displayUsername=findViewById(R.id.displayUsername);
+
+        //tvEmail.setText(getIntent().getStringExtra("Email"));
+
+        String email=getIntent().getStringExtra("Email");
+        String uname=getIntent().getStringExtra("Username");
+
+        tvEmail.setText(email);
+
+        if(uname!=null) {
+            tvUsername.setText(uname);
+            displayUsername.setText(uname);
+        }
+
 
         /*
         * Buttons for navigation to various activities : change them as needed in content_main.xml
